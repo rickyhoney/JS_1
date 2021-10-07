@@ -10,7 +10,7 @@
 
     <div id = "div1">
     </p> non SCHIACCIARE </p>
-    </div>
+    </div> // dichiaro div per scrivere
     
 
     <script>
@@ -21,20 +21,20 @@
       // // funzioneClick();
 
     var funzioneClick = function(stringa){
-      console.log("click" + stringa)
+      console.log("click" + stringa) // stampo click
     };
 
-    var rosso = false;
-    var bottone3 = document.getElementById("btn3");
+    var rosso = false; // boleana per il colore
+    var bottone3 = document.getElementById("btn3"); //dichiaro il listener
     
-    bottone3.addEventListener("click", 
+    bottone3.addEventListener("click", // richiamo oil listener
     function(){
       
        funzioneClick("listener") //se aggiungo le parentesi gli passo la definizione
        
-       document.getElementById("div1").innerHTML = "<h1> AVEVO DETTO DI NON SCHIACCIARE </h1>"
+       document.getElementById("div1").innerHTML = "<h1> AVEVO DETTO DI NON SCHIACCIARE </h1>" // richiamo div quando premo il pulsante
 
-       if(rosso === false){
+       if(rosso === false){ // cambio il colore del bottone
 
         bottone3.setAttribute("style" , "background-color: red")
         rosso = true;
