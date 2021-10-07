@@ -1,0 +1,32 @@
+<html>
+  <head>
+    <title>ES 1</title>
+  </head>
+  <body>
+
+    <button onclick = "console.log('click da evento')"> cliccami da evento </button>
+    <button onclick = "funzioneClick('script')"> cliccami da script </button>
+    <button id = "btn3"> cliccami da listenery </button>
+
+
+    <script>
+      // var funzioneClick = function(){
+      //   //OPERAZIONI
+      //   console.log("click da script");
+      // };
+      // // funzioneClick();
+
+    var funzioneClick = function(stringa){
+      console.log("click" + stringa)
+    };
+
+    var bottone3 = document.getElementById("btn3");
+    bottone3.addEventListener("click", 
+    function(){
+       funzioneClick("listener") //se aggiungo le parentesi gli passo la definizione
+       });
+
+
+    </script>
+  </body>
+</html>
