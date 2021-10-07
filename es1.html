@@ -8,6 +8,10 @@
     <button onclick = "funzioneClick('script')"> cliccami da script </button>
     <button id = "btn3"> cliccami da listenery </button>
 
+    <div id = "div1">
+    </p> non SCHIACCIARE </p>
+    </div>
+    
 
     <script>
       // var funzioneClick = function(){
@@ -20,11 +24,28 @@
       console.log("click" + stringa)
     };
 
+    var rosso = false;
     var bottone3 = document.getElementById("btn3");
+    
     bottone3.addEventListener("click", 
     function(){
+      
        funzioneClick("listener") //se aggiungo le parentesi gli passo la definizione
+       
+       document.getElementById("div1").innerHTML = "<h1> AVEVO DETTO DI NON SCHIACCIARE </h1>"
+
+       if(rosso === false){
+
+        bottone3.setAttribute("style" , "background-color: red")
+        rosso = true;
+
+       } else {
+         
+        bottone3.setAttribute("style" , "background-color: default")
+        rosso = false;}
+        
        });
+
 
 
     </script>
